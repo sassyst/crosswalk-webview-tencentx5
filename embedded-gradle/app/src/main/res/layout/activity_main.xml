@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!--<include layout="@layout/content_main"/>-->
+    <FrameLayout
+        android:id="@+id/content_main"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_add"
+            android:visibility="visible"
+            app:backgroundTint="@color/colorAccent"
+            app:elevation="6dp"
+            android:layout_alignParentRight="true"
+            app:pressedTranslationZ="12dp" />
+        <ListView
+            android:id="@+id/lvMenus"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_above="@id/fab"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/testcanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorFAB1"
+            app:elevation="6dp"
+            android:visibility="invisible"
+            app:pressedTranslationZ="12dp" />
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Canvas"
+            android:visibility="invisible"
+            android:elevation="16dp"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/testwebgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorFAB1"
+            app:elevation="6dp"
+            android:visibility="invisible"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="WebGL"
+            android:id="@+id/tv2"
+            android:visibility="invisible"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/testcss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:backgroundTint="@color/colorFAB1"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:id="@+id/tv3"
+            android:visibility="invisible"
+            android:text="CSS3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/testhtml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:backgroundTint="@color/colorFAB1"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="HTML5"
+            android:id="@+id/tv4"
+            android:visibility="invisible"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorFAB1"
+            app:elevation="6dp"
+            android:visibility="invisible"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="工行"
+            android:id="@+id/tv5"
+            android:visibility="invisible"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorFAB1"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:id="@+id/tv6"
+            android:visibility="invisible"
+            android:text="边防"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+    -->
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_settings"
+            android:visibility="invisible"
+            android:background="@drawable/settings"
+            android:layout_toLeftOf="@id/fab"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentBottom="true"
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_reflsh"
+            android:background="@drawable/refresh"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@id/btn_settings"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentBottom="true"
+            />
+        </RelativeLayout>
+</RelativeLayout>
